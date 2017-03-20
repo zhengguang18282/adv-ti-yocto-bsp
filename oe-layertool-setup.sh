@@ -34,9 +34,9 @@
 ####################
 # Global variables #
 ####################
-OECORELAYERCONF="" # sample configuration file used for bblayers.conf
+OECORELAYERCONF="sample-files/bblayers.conf.sample" # sample configuration file used for bblayers.conf
 OECORELAYERCONFPATH="" # stores the path of the OECORELAYERCONFPATH variable
-OECORELOCALCONF="" # sample configuration file used for local.conf
+OECORELOCALCONF="sample-files/local-processor-sdk-64.conf.sample" # sample configuration file used for local.conf
 OECORELOCALCONFPATH="" # stores the path of the OECORELOCALCONFPATH variable
 outputfile="" # file to save output to if -o is used
 inputfile="" # file containing initial layers if -f is used
@@ -122,22 +122,8 @@ exit 1
 
 
 check_input() {
-    # Check that at least -i or -f was used
-    if [ "$interactive" = "n" -a "x$inputfile" = "x" ]
-    then
-        echo "ERROR: You must either use this script with the -i or -f options"
-        usage
-    fi
-
-    # If an input file was given make sure it exists
-    if [ ! -f $inputfile ]
-    then
-        echo "ERROR: the file \"$inputfile\" given for inputfile does not exist"
-        usage 
-    fi
-
     # If directories do not exist then create them
-    for f in sourcedir builddir confdir
+    for f in builddir confdir
     do
         eval t="$"$f
         if [ ! -d $t ]
@@ -685,6 +671,7 @@ NOTE: Any additional entries to this file will be lost if the $0
 
 EOM
     # First copy the template file
+
     cp -f $OECORELAYERCONFPATH $confdir/bblayers.conf
 
     # Now add the layers we have configured to the BBLAYERS variable
@@ -856,47 +843,6 @@ builddir="$oebase/build"
 confdir="$builddir/conf"
 
 check_input
-
-if [ "x$inputfile" != "x" ]
-then
-    parse_input_file
-fi
-
-if [ "x$interactive" = "xy" ]
-then
-    cont="y"
-    while [ "x$cont" = "xy" -o "x$cont" = "xY" ]
-    do
-        # clean up the variables for each repo
-        name=""
-        uri=""
-        branch=""
-        commit=""
-        repo_layers=""
-
-        configure_repo
-
-        if [ "$?" != "0" ]
-        then
-            continue
-        fi
-
-        # Create the repository line corresponding to the selections given.
-        # In the case that no layers= option was passed then this will
-        # create the layers= option corresponding to all layers being selected.
-        repo_line=`build_repo_line`
-
-        # Save the line in the output variable for if we create an output file
-        output="$output""$repo_line\n"
-
-        save_layers
-
-        echo ""
-        echo ""
-        echo "Would you like to configure another repository? [y/n] "
-        read cont
-    done
-fi
 
 get_oecorelayerconf
 config_oecorelayerconf
