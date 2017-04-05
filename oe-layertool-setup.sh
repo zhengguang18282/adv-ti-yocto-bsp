@@ -680,10 +680,19 @@ cat >> $confdir/bblayers.conf << EOM
 # Layers configured by oe-core-setup script
 BBLAYERS += " \\
 EOM
-    for l in $layers
-    do
-        printf "\t$l \\%b" "\n" >> $confdir/bblayers.conf
-    done
+    echo -e "\t$sourcedir/meta-processor-sdk \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-arago/meta-arago-distro \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-arago/meta-arago-extras \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-advantech/meta-ti-57xx \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-qt5 \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-openembedded/meta-networking \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-openembedded/meta-ruby \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-openembedded/meta-python \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-openembedded/meta-oe \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-openembedded/meta-gnome \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-ti \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-linaro/meta-linaro-toolchain \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/oe-core/meta \\" >> $confdir/bblayers.conf
     echo "\"" >> $confdir/bblayers.conf
 }
 
