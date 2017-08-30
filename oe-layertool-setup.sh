@@ -693,6 +693,7 @@ EOM
     echo -e "\t$sourcedir/meta-ti \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-linaro/meta-linaro-toolchain \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/oe-core/meta \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-advantech/meta-WISE-PaaS \\" >> $confdir/bblayers.conf
     echo "\"" >> $confdir/bblayers.conf
 }
 
