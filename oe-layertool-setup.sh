@@ -690,10 +690,12 @@ EOM
     echo -e "\t$sourcedir/meta-openembedded/meta-python \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-openembedded/meta-oe \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-openembedded/meta-gnome \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-openembedded/meta-initramfs \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-ti \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-linaro/meta-linaro-toolchain \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/oe-core/meta \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-advantech/meta-WISE-PaaS \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-advantech/meta-tools \\" >> $confdir/bblayers.conf
     echo "\"" >> $confdir/bblayers.conf
 }
 
