@@ -1,7 +1,7 @@
 # This file takes repo entries in the format
 # repo name,repo uri,repo branch,repo commit[,layers=layer1:layer2...:layern]
 
-meta-advantech,https://github.com/ADVANTECH-Corp/meta-advantech.git,krogoth,HEAD,layers=meta-ti-adv:meta-WISE-PaaS:meta-tools
+meta-advantech,https://github.com/ADVANTECH-Corp/meta-advantech.git,krogoth,91382552f58d2c4504d5988c3bc00efda2d6e629,layers=meta-ti-adv:meta-WISE-PaaS:meta-tools
 bitbake,git://git.openembedded.org/bitbake,1.30,bee144eeed6c08ec2829533e82f94405058ce453,layers=
 meta-processor-sdk,http://arago-project.org/git/projects/meta-processor-sdk.git,master,6b3984287c3c15fde80dcc5a0999fb85c6a8a6c6,layers=
 meta-arago,http://arago-project.org/git/meta-arago.git,krogoth,b6fea965af0129f552d45e9c7d85937e6076f645,layers=meta-arago-distro:meta-arago-extras
