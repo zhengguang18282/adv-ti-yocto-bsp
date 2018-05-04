@@ -20,7 +20,7 @@
   <project remote="meta-ti" revision="008497c611bc381014d310678e7dd39668959fea" name="meta-ti.git" path="sources/meta-ti"/>
   <project remote="meta-linaro" revision="85faf6c6824597e7fd9e2d35fc9d8da2e9f90bc7" name="meta-linaro.git" path="sources/meta-linaro"/>
 
-  <project remote="meta-advantech" revision="b8a1120fc311870c605d69f102555b997fac8941" name="meta-advantech" path="sources/meta-advantech" >
+  <project remote="meta-advantech" revision="krogoth" name="meta-advantech" path="sources/meta-advantech" >
     <linkfile dest="configs" src="../../.repo/manifests/configs"/>
     <linkfile dest="sample-files" src="../../.repo/manifests/sample-files"/>
     <linkfile dest="oe-layertool-setup.sh" src="../../.repo/manifests/oe-layertool-setup.sh"/>

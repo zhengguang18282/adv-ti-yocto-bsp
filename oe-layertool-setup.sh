@@ -683,7 +683,9 @@ EOM
     echo -e "\t$sourcedir/meta-processor-sdk \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-arago/meta-arago-distro \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-arago/meta-arago-extras \\" >> $confdir/bblayers.conf
-    echo -e "\t$sourcedir/meta-advantech/meta-ti-57xx \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-advantech/meta-ti-adv \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-advantech/meta-WISE-PaaS \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-advantech/meta-tools \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-qt5 \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-openembedded/meta-networking \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-openembedded/meta-ruby \\" >> $confdir/bblayers.conf
@@ -694,8 +696,6 @@ EOM
     echo -e "\t$sourcedir/meta-ti \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-linaro/meta-linaro-toolchain \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/oe-core/meta \\" >> $confdir/bblayers.conf
-    echo -e "\t$sourcedir/meta-advantech/meta-WISE-PaaS \\" >> $confdir/bblayers.conf
-    echo -e "\t$sourcedir/meta-advantech/meta-tools \\" >> $confdir/bblayers.conf
     echo "\"" >> $confdir/bblayers.conf
 }
 
