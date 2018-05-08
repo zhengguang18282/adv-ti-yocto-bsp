@@ -686,6 +686,9 @@ EOM
     echo -e "\t$sourcedir/meta-advantech/meta-ti-adv \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-advantech/meta-WISE-PaaS \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-advantech/meta-tools \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-advantech/meta-Edge-Sense \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-nodejs \\" >> $confdir/bblayers.conf
+    echo -e "\t$sourcedir/meta-nodejs-contrib \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-qt5 \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-openembedded/meta-networking \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-openembedded/meta-ruby \\" >> $confdir/bblayers.conf

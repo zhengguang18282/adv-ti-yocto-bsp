@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <manifest>
 
-  <default sync-j="2"/>
+  <default revision="krogoth" sync-j="2"/>
 
   <remote fetch="git://git.openembedded.org" name="openembedded"/>
   <remote fetch="http://arago-project.org/git/projects" name="meta-processor-sdk"/>
@@ -10,6 +10,7 @@
   <remote fetch="http://arago-project.org/git" name="meta-ti"/>
   <remote fetch="git://git.linaro.org/openembedded" name="meta-linaro"/>
   <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech" />
+  <remote fetch="https://github.com" name="github"/>
 
   <project remote="openembedded" revision="bee144eeed6c08ec2829533e82f94405058ce453" upstream="1.30" name="bitbake" path="sources/bitbake"/>
   <project remote="openembedded" revision="247b1267bbe95719cd4877d2d3cfbaf2a2f4865a" upstream="krogoth" name="meta-openembedded" path="sources/meta-openembedded"/>
@@ -19,6 +20,8 @@
   <project remote="meta-qt5" revision="48b4084675a15fe3fd10b58f54728dfaa2bd6c72" upstream="krogoth" name="meta-qt5.git" path="sources/meta-qt5"/>
   <project remote="meta-ti" revision="008497c611bc381014d310678e7dd39668959fea" upstream="krogoth" name="meta-ti.git" path="sources/meta-ti"/>
   <project remote="meta-linaro" revision="85faf6c6824597e7fd9e2d35fc9d8da2e9f90bc7" upstream="krogoth" name="meta-linaro.git" path="sources/meta-linaro"/>
+  <project remote="github" name="imyller/meta-nodejs" path="sources/meta-nodejs"/>
+  <project remote="github" name="imyller/meta-nodejs-contrib" path="sources/meta-nodejs-contrib"/>
 
   <project remote="meta-advantech" revision="krogoth" name="meta-advantech" path="sources/meta-advantech" >
     <linkfile dest="configs" src="../../.repo/manifests/configs"/>
