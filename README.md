@@ -16,12 +16,12 @@ cd <BSP folder>
 
 To get the latest version of Advantech meta layers, you can get without specific XML.
 ```
-repo init -u git://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b processor-sdk-03.01.00.06-EdgeSense
+repo init -u git://github.com/ADVANTECH-Corp/adv-ti-yocto-bsp.git -b processor-sdk-03.01.00.06-EdgeSense
 ```
 
 To get an official release version, you can assign the corresponding XML, e.g. version.xml.
 ```
-repo init -u https://github.com/ADVANTECH-Corp/adv-arm-yocto-bsp.git -b processor-sdk-03.01.00.06-EdgeSense -m version.xml
+repo init -u https://github.com/ADVANTECH-Corp/adv-ti-yocto-bsp.git -b processor-sdk-03.01.00.06-EdgeSense -m version.xml
 ```
 
 Finally, pull down the BSP by running
