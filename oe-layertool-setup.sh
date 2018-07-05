@@ -747,6 +747,17 @@ EOM
     fi
 
     sed -i "s|^DL_DIR.*|DL_DIR = \"${dldir}\"|" $confdir/local.conf
+
+    # Set mirror downloads server
+    cat >> $confdir/local.conf <<EOF
+
+# Set mirror server
+ADVANTECH_MIRROR_SERVER="ftp://ess-downloads.advantech.com.tw/"
+MIRRORS_prepend = "\\
+    git://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\
+    https?$://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\
+    ftp://.*/.* \${ADVANTECH_MIRROR_SERVER} \n \\"
+EOF
 }
 
 
