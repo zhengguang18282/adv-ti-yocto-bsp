@@ -712,7 +712,6 @@ EOM
     echo -e "\t$sourcedir/oe-core/meta \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-openembedded/meta-initramfs \\" >> $confdir/bblayers.conf
     echo -e "\t$sourcedir/meta-advantech2/meta-ti-adv \\" >> $confdir/bblayers.conf
-    echo -e "\t$sourcedir/meta-advantech2/meta-WISE-PaaS \\" >> $confdir/bblayers.conf
     echo "\"" >> $confdir/bblayers.conf
 }
 
