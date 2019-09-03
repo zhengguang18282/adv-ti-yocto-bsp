@@ -11,7 +11,7 @@
   <remote fetch="git://github.com/meta-qt5" name="meta-qt5"/>
   <remote fetch="git://git.yoctoproject.org" name="yocto"/>
   <remote fetch="https://git.linaro.org/openembedded" name="meta-linaro"/>
-  <remote fetch="https://github.com/ADVANTECH-Corp" name="meta-advantech2" />
+  <remote fetch="https://github.com/zhengguang18282" name="meta-advantech2" />
 
   <project remote="openembedded" revision="582f1d7a8d150cf5917dfc1efa844f40131ae4bf" upstream="1.36" name="bitbake" path="sources/bitbake"/>
   <project remote="openembedded" revision="eae996301d9c097bcbeb8046f08041dc82bb62f8" upstream="rocko" name="meta-openembedded" path="sources/meta-openembedded"/>
