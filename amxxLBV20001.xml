@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<manifest>
+  <remote fetch="https://github.com/zhengguang18282" name="meta-advantech2"/>
+  <remote fetch="http://arago-project.org/git" name="meta-arago"/>
+  <remote fetch="git://github.com/OSSystems" name="meta-browser"/>
+  <remote fetch="https://git.linaro.org/openembedded" name="meta-linaro"/>
+  <remote fetch="http://arago-project.org/git/projects" name="meta-processor-sdk"/>
+  <remote fetch="git://github.com/meta-qt5" name="meta-qt5"/>
+  <remote fetch="https://github.com/bmwcarit" name="meta-ros"/>
+  <remote fetch="git://git.openembedded.org" name="openembedded"/>
+  <remote fetch="git://git.yoctoproject.org" name="yocto"/>
+  
+  <default sync-j="2"/>
+  
+  <project name="bitbake" path="sources/bitbake" remote="openembedded" revision="582f1d7a8d150cf5917dfc1efa844f40131ae4bf" upstream="1.36"/>
+  <project name="meta-advantech2" path="sources/meta-advantech2" remote="meta-advantech2" revision="bfd09be1908ee7bb2eaaaa07f6212eea242a2186" upstream="aim20-rocko-sumo">
+    <linkfile dest="configs" src="../../.repo/manifests/configs"/>
+    <linkfile dest="sample-files" src="../../.repo/manifests/sample-files"/>
+    <linkfile dest="oe-layertool-setup.sh" src="../../.repo/manifests/oe-layertool-setup.sh"/>
+  </project>
+  <project name="meta-arago.git" path="sources/meta-arago" remote="meta-arago" revision="d4bc00af838df7a77f4ddbd3546755c5bad5b880" upstream="rocko"/>
+  <project name="meta-browser.git" path="sources/meta-browser" remote="meta-browser" revision="26d50665e2f7223c5f4ad7481a8d2431e7cb55fb" upstream="master"/>
+  <project name="meta-linaro.git" path="sources/meta-linaro" remote="meta-linaro" revision="cd9ee776044a2d8943be4cb019f063271e9c684d" upstream="rocko"/>
+  <project name="meta-openembedded" path="sources/meta-openembedded" remote="openembedded" revision="eae996301d9c097bcbeb8046f08041dc82bb62f8" upstream="rocko"/>
+  <project name="meta-processor-sdk.git" path="sources/meta-processor-sdk" remote="meta-processor-sdk" revision="f33a37ac6baa8155302fa1faea99f1be5461779e" upstream="master"/>
+  <project name="meta-qt5.git" path="sources/meta-qt5" remote="meta-qt5" revision="d8b531530fa42b59aa0a5b123d87a30d749cbcc4" upstream="rocko"/>
+  <project name="meta-ros.git" path="sources/meta-ros" remote="meta-ros" revision="e2566402ab108a19634354a934788109422cf409" upstream="master"/>
+  <project name="meta-ti" path="sources/meta-ti" remote="yocto" revision="02e852b1a069463f937ea594e13fe5f88ce9b74d" upstream="rocko"/>
+  <project name="meta-virtualization" path="sources/meta-virtualization" remote="yocto" revision="b704c689b67639214b9568a3d62e82df27e9434f" upstream="rocko"/>
+  <project name="openembedded-core" path="sources/oe-core" remote="openembedded" revision="3638cb32ba9ba32b4d498fc31ab7fdf82f0d2495" upstream="rocko"/>
+</manifest>
